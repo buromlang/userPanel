@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'userPanel.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'users',
+        'NAME': 'customuser',
         'USER': 'buromlangshylla',
         'PASSWORD': 'root',
         'HOST': 'localhost',
@@ -106,6 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "users.CustomUser"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
