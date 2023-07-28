@@ -7,6 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
         User = get_user_model()
         model = User
         fields = ('id', 'password', 'email')
+        extra_kwargs = {'password': {'write_only': True, 'required': False}}
 
     def create(self, validated_data):
         User = get_user_model()
